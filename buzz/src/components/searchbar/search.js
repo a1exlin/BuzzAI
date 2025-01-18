@@ -5,9 +5,11 @@ import './search.css';
 function Searchbar() {
     const [question, setQuestions] = useState("");
     const [answer, setAnswers] = useState("");
+    const [originalQuestion, setOriginalQuestion] = useState("");
 
     const getAnswer = () => {
         const lowerCaseQuestion = question.toLowerCase();
+        setOriginalQuestion(question);
         // Define answers for some common questions
         const answers = {
             "how are you?": "I'm just a AI, humans programmed me to say I am doing great!",
@@ -48,9 +50,15 @@ function Searchbar() {
                 value={question}
                 onChange={(e)=>{setQuestions(e.target.value)}}
                 onKeyDown={handleKeyDown} // listen for keypress
+                style={{width:"100%", maxWidth:"500px", padding:"10px", fontSize: "1rem", marginTop:"200px",}}
             />
-            <button onClick={getAnswer} class="button is-primary" style={{fontSize:"1rem", marginTop:"20px"}}>click me!</button>
-            <p className='container-2'>{answer}</p>
+            <button onClick={getAnswer} class="button is-primary" style={{fontSize:"1rem", width:"auto", maxWidth: "200px", marginTop:"20px",}}>click me!</button>
+            {/* <p className='container-2'>{answer}</p> */}
+            {answer && (
+                <div className='container-2'><p>{answer},</p>
+
+                </div>
+                )}
         </div>
     );
 
