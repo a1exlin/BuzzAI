@@ -24,6 +24,7 @@ box-sizing: border-box;
     text-align: center;
     margin: 20px 0;
     line-height: 1.2;
+    word-wrap: break-word;
 }
 
 
@@ -33,6 +34,7 @@ box-sizing: border-box;
     }
     .header{
         font-size: 1.5rem;
+        margin: 15px 0;
     }
     .img{
         max-width: 250px;
@@ -44,6 +46,7 @@ box-sizing: border-box;
     }
     .header{
         font-size: 1.2rem;
+        margin: 10px 0;
     }
     .img{
         max-width: 200px;
