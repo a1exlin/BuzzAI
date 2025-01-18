@@ -4,9 +4,10 @@
 display: flex;
 flex-direction: column;
 align-items: center;
-justify-content:space-between;
-padding: 20px;
-height: 100vh;
+justify-content:center;
+padding:20px;
+padding-top:30px;
+min-height:100vh;
 text-align: center;
 box-sizing: border-box;
 }

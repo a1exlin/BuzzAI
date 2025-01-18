@@ -50,9 +50,9 @@ function Searchbar() {
                 value={question}
                 onChange={(e)=>{setQuestions(e.target.value)}}
                 onKeyDown={handleKeyDown} // listen for keypress
-                style={{width:"100%", maxWidth:"500px", padding:"10px", fontSize: "1rem", marginTop:"200px",}}
+                style={{width:"100%", maxWidth:"500px", padding:"10px", fontSize: "1rem",position:"absolute",}}
             />
-            <button onClick={getAnswer} class="button is-primary" style={{fontSize:"1rem", width:"auto", maxWidth: "200px", marginTop:"20px",}}>click me!</button>
+            <button onClick={getAnswer} class="button is-primary" style={{fontSize:"1rem", width:"auto", maxWidth: "200px", marginBottom:"-160px", position: "absolute",}}>click me!</button>
             {/* <p className='container-2'>{answer}</p> */}
             {answer && (
                 <div className='container-2'><p>{answer},</p>
